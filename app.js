@@ -1,10 +1,8 @@
-// Object Destructuring 2
-let planetFacts = {
-    numPlanets: 8,
-    yearNeptuneDiscovered: 1846,
-    yearMarsDiscovered: 1659
-  };
+// Object Destructuring 3
+function getUserData({firstName, favoriteColor="green"}){
+    return `Your name is ${firstName} and you like ${favoriteColor}`;
+  }
   
-let {numPlanets, ...discoveryYears} = planetFacts;
-
-console.log(discoveryYears); // {yearNeptuneDiscovered: 1846, yearMarsDiscovered: 1659}
+getUserData({firstName: "Alejandro", favoriteColor: "purple"}) // Your name is Alejandro and you like purple
+getUserData({firstName: "Melissa"}) // Your name is Melissa and you like green
+getUserData({}) // Your name is undefined and you like green
