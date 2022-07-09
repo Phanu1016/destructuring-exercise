@@ -1,6 +1,10 @@
-// Object Destructuring 1
-let facts = {numPlanets: 8, yearNeptuneDiscovered: 1846};
-let {numPlanets, yearNeptuneDiscovered} = facts;
+// Object Destructuring 2
+let planetFacts = {
+    numPlanets: 8,
+    yearNeptuneDiscovered: 1846,
+    yearMarsDiscovered: 1659
+  };
+  
+let {numPlanets, ...discoveryYears} = planetFacts;
 
-console.log(numPlanets); // 8
-console.log(yearNeptuneDiscovered); // 1846
+console.log(discoveryYears); // {yearNeptuneDiscovered: 1846, yearMarsDiscovered: 1659}
